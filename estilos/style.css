@@ -30,14 +30,13 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /* tudo que estiver fora da borda vai ficar escondido*/
     background-color: white;
     width: 250px;
     height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
-
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s; /* faz um animação na mudança de largura e altura */
     transition-timing-function: ease; /* da uma suavizada na animação */
     
@@ -68,15 +67,41 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px; /* a de cima e de baixo com 5 e as do lado com 0*/
 }
 
-form label {
+
+div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+
+div.campo > input {
+    background-color: #5ad1cd;
+    font-size: 1em;
+    width: calc(100% - 45px); /* calculado 100% da lagura menos 45px , para ser mais preciso*/
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-13px); /* sempre deixe por ultimo */
+}
+
+div.campo > input:focus-within { /* foco,  a caixa ao clicar ganha foco e no caso fica branca*/
+    background-color: white;
 }
 
 
